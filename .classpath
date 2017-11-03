@@ -13,5 +13,10 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/UCanAccess-4.0.2-bin/ucanaccess-4.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/UCanAccess-4.0.2-bin/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/UCanAccess-4.0.2-bin/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/UCanAccess-4.0.2-bin/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/UCanAccess-4.0.2-bin/lib/jackcess-2.1.6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

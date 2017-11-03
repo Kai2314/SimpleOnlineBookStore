@@ -18,7 +18,7 @@ function CheckData(Price){
 		document.frmPrice.elements(0).focus();
 		return;
 	}
-	if(isNaN(parseInt(frmPrice.tbxPrice.value))){
+	if(isNaN(parseInt(frmPrice.tbxPrice.value))){  //isNaN也可以換其他方法
 		window.alert("請輸入數字!!");
 		document.frmPrice.elements(0).focus();
 		return;
@@ -70,8 +70,8 @@ try{
 	<jsp:useBean id="initBid" class="com.bitc.store.Bid"/>
 	
 	<%--設定Bean物件的屬性 --%>
-	<jsp:useBean name="initBid" property="name" value="起標價"/>
-	<jsp:useBean name="initBid" property="price" value="450"/>
+	<jsp:setProperty name="initBid" property="name" value="起標價"/>
+	<jsp:setProperty name="initBid" property="price" value="450"/>
 	<% 
 	String path = request.getRealPath("/");  //取得上一層目錄的實際磁碟路徑  
 	//request.getSession().getServletContext().getRealPath();
