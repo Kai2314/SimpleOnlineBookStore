@@ -56,7 +56,7 @@ public class BookList {
 	public String getBookID() {
 		String result = null;
 		try {
-			result = bookRs.getString("BookID");
+			result = bookRs.getString("BookNm");
 		}catch(SQLException sqlex) {
 			System.out.println(sqlex.toString());
 		}

@@ -8,7 +8,7 @@ import javax.naming.*;
 
 public class DBCon implements HttpSessionBindingListener{  
 	private Connection con = null; // DataBase Connection
-	private String dbURL = "";
+	
 	public DBCon() {   
 		BuildConnection();
 	}
@@ -17,11 +17,10 @@ public class DBCon implements HttpSessionBindingListener{
 		try {
 			//Context ic = new InitialContext();  //create InitialContext 
 			//DataSource ds = (DataSource) ic.lookup("java:comp/env/jdbc/StoreDB");//use lookup() to look for contact to jdbc/StoreDB(JNDI)'s object of DataSource
-			//con = ds.getConnection();
-			Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");  //jdk8 之後不再支援ODBC
-			dbURL = "jdbc:ucanaccess://C:/StoreDB.mdb";
-			con = DriverManager.getConnection(dbURL);
 			
+			//con = ds.getConnection();
+			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			con = DriverManager.getConnection("jdbc:odbc:StoreDB");
 		}catch(Exception ex) {
 			System.out.println(ex.toString());
 		}

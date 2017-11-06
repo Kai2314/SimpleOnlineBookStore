@@ -22,11 +22,11 @@ if(Category == null || CategoryID == null){
 	CategoryID = cate.getCateID();
 	Category = cate.getCategory();
 	
-	cate.CloseCateRs();
+	cate.CloseCateRs();  
 }
 %>
 <center>
-<h2><font color=mediumseagreen>[<%= Category %>]</font>類</h2>
+<h2>[<%= Category %>] 類</h2>
 <hr>
 <FROM name = "OrdBook" action = "PutCart.jsp" method = post>
 <table border = 1>
@@ -78,7 +78,7 @@ bl.CloseBookRs();
 <input type="hidden" name="CategoryID" value=<%= CategoryID %>>
 <input type="hidden" name="Category" value=<%= Category %>>
 <br>
-<input type="submit" value="放入購物車" name=submit1>
+<input type="submit" value="放入購物車" name="submit1" />
 </FROM>
 <hr>
 <font size = 4 color=DarkRed>

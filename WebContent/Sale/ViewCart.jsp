@@ -5,7 +5,7 @@
 <% 
 //若購物車中沒有書籍訂購資料時，會將瀏覽器導向至Message.htm網頁
 if(Cart.HaveBooks() == false){%>
-	<jsp:forward page=Message.htm/>
+	<jsp:forward page="Message.html" />
 <%}%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
