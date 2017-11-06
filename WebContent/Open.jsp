@@ -10,14 +10,13 @@
 </CENTER>
 <HR>
 <P></P>
-
 <CENTER>
 <%
 Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 //載入驅動程式類別
-String url = "jdbc:odbc:StoreDB";
 
-Connection con = DriverManager.getConnection(url);
+String dbURL = "jdbc:ucanaccess://C:/StoreDB.mdb";
+Connection con = DriverManager.getConnection(dbURL);
 //建立資料庫連線
 
 Statement stmt = con.createStatement();

@@ -4,7 +4,8 @@
 <jsp:useBean id="con" scope="session" class="com.bitc.store.DBCon"/>
 <%
 if(cart.HaveBooks()==false){%>
-	<jsp:forward page="Message.html"><%
+	<jsp:forward page="Message.html"/>
+	    <%  //response.sendRedirect("Message.html");
 	}%>	
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
