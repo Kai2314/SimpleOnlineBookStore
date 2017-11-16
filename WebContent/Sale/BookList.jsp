@@ -26,7 +26,7 @@ if(Category == null || CategoryID == null){
 }
 %>
 <center>
-<h2>[<%= Category %>] Ãþ</h2>
+
 <hr>
 <FROM name = "OrdBook" action = "PutCart.jsp" method = post>
 <table border = 1>

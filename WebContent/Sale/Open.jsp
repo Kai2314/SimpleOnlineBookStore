@@ -2,23 +2,21 @@
 	import="java.sql.*"%>
 <HTML>
 <HEAD>
-<TITLE>透過JNDI取得資料庫連結</TITLE>
+<TITLE></TITLE>
 </HEAD>
 <BODY>
 <CENTER>
-<FONT SIZE = 5 COLOR = blue>透過JNDI取得資料庫連結</FONT>
+<FONT SIZE = 5 COLOR = blue></FONT>
 </CENTER>
 <HR>
 <P></P>
 
 <CENTER>
 <%
-Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-//載入驅動程式類別
+Class.forName("net.ucanaccess.jdbc.UcanaccessDriver");
 
-Connection con = DriverManager.getConnection("jdbc:odbc:StoreDB");
-//建立資料庫連線
-
+String dbURL = "jdbc:ucanaccess://C:/StoreDB.mdb";
+Connection con = DriverManager.getConnection(dbURL);
 Statement stmt = con.createStatement();
 //建立Statement物件
 
