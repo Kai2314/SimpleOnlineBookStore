@@ -58,7 +58,7 @@ public class CartBean {
 			
 			str1 = BookList.substring(0,start-1);
 			str2 = BookList.substring(end);
-			BookList = str1 + Quantity + str2;
+			BookList = str1 + Quantity + str2;  //New price set in the booklist
 		}
 	}
 	
@@ -149,7 +149,7 @@ public class CartBean {
 			
 			sta = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 			
-			String strSQL = "INSERT INTO BookOrder" + "(OrderTime,Name,Phone,E_mail,Address)"+
+			String strSQL = "INSERT INTO BookOrder" + "(OrderTime,Name,Phone,E_Mail,Address)"+
 			"VALUES ('" + Time + "','" + Name + "','" + Phone +"','" + E_Mail + "','" + Address +"')";
 		
 			sta.executeQuery(strSQL);
@@ -184,6 +184,7 @@ public class CartBean {
 	//
 	public String Now() {
 		Date Now = new Date();
+		
 		String year = String.valueOf(Now.getYear()+1990);
 		String month = String.valueOf(Now.getMonth()+1);
 		String day = String.valueOf(Now.getDay());
@@ -193,8 +194,8 @@ public class CartBean {
 		
 		return year+"/"+month+"/"+day+"/"+hour+":"+minute+":"+second;
 	}
-	
-	public String BookID() {
+	 
+	public String BookID() {   //ex: BookList A1243:1005&P3237:256&
 		String BookID = "";
 		int start = 0;
 		int end = 0;

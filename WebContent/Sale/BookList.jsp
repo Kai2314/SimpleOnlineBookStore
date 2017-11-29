@@ -28,7 +28,7 @@ if(Category == null || CategoryID == null){
 <center>
 
 <hr>
-<FROM name = "OrdBook" action = "PutCart.jsp" method = post>
+<FORM name="OrdBook" action="PutCart.jsp" method=post>
 <table border = 1>
 <tr bgcolor=lightblue align=middle>
 <td width = 10><font color=darkblue size=4><B>挑選</B></font></td>
@@ -55,14 +55,14 @@ if(cart.isSelected(BID)){
 <td>
 <input checked name=ckbBID type=checkbox value="<%= BID%>" disabled></td>
 <td>
-<input style="hight:25px; width:30px" name=txb<%= BID %> type=textbox 
+<input style="hight:25px; width:30px" name=txb<%= BID %> type="textbox" 
 value="<%= cart.getQuantity(BID) %>" disabled></td><% }
 else
 { %>
 	<td>
 	<input name=ckbBID type=checkbox value="<%= BID %>"/></td>
 	<td>
-	<input style="hight:25px;width:30px" type=textbox name=txb<%= BID %>value="1">
+	<input style="hight:25px;width:30px" type="textbox" name=txb<%= BID %>value="1">
 	</td><% 
 }%>
 <td><font color=Maroon><%= BID %></font></td>
@@ -79,7 +79,7 @@ bl.CloseBookRs();
 <input type="hidden" name="Category" value=<%= Category %>>
 <br>
 <input type="submit" value="放入購物車" name="submit1" />
-</FROM>
+</FORM>
 <hr>
 <font size = 4 color=DarkRed>
 [<a href=OrderForm.jsp>訂購</a>|
